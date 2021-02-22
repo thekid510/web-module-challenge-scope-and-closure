@@ -43,6 +43,9 @@ Find the file `index.js` and complete the tasks.
 Edit the `ReadMe` file with your answers.
 
 1. In your own words, define closure (1-2 sentences).
+
+Closures give us the ability to access a functions outer scope from an inner function even when the parents function has been closed.
+
 2. Study the following code, then answer the questions below.
 
 ```js
@@ -64,9 +67,16 @@ dansRoll();
 ```
 
 a. Where is closure used in this code? How can you tell?
+
+The closure is inside the return function because under that referencing the closure above and Closures give us the ability to access a functions outer scope from an inner function even when the parents function has been closed just like we see above .
+
 b. Compare and contrast calling `dansRoll` the first and second time. What is always the same? What could change?
+
+What is always the same is that Dan will roll 2 dice rolling a number between 1-6, and what can change is the number that Dan rolls but it could be the same 2 numbers between 1-6.
+
 c. What is the lexical scope of `newRoll`? 
 
+The Lexical scope of newRoll is at line 52 because it creates a new scope.
 
 ### Task 3 - Stretch Goals
 
