@@ -76,7 +76,7 @@ What is always the same is that Dan will roll 2 dice rolling a number between 1-
 
 c. What is the lexical scope of `newRoll`? 
 
-The Lexical scope of newRoll is at line 52 because it creates a new scope.
+The Lexical scope of newRoll is the const = because its searching for its value.
 
 ### Task 3 - Stretch Goals
 
