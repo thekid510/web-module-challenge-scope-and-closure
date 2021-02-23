@@ -104,16 +104,17 @@ Use the getInningScore() function below to do the following:
   1. Receive a callback function - you will pass in the inning function from task 2 as your argument 
   2. Return an object with a score for home and a score for away that populates from invoking the inning callback function */
 
-function getInningScore(cb,number) {
-  let Home = 0;
-  let Away = 0;
-  for(let i=0; i <= number; i++){
-  Home = Home + callback();
-  Away = Away + callback();
+function getInningScore(inningCB) {
+  return {
+    Home: inningCB(),
+    Away: inningCB()
 
+
+  }  
 }
-return{Home, Away};
-}
+console.log(getInningScore(inning));
+
+
 
 
 /* ⚾️⚾️⚾️ Task 5: scoreboard() ⚾️⚾️⚾️
@@ -157,11 +158,20 @@ Use the scoreboard function below to do the following:
 ]  
   */
 
-function scoreboard(/* CODE HERE */) {
-  /* CODE HERE */
+function scoreboard(inningcb, scorecb){
+  const totalGame = [];
+  let homeScore = 0;
+  let awayScore = 0;
+  
+  for(let i=0; i < 9; i++){
+  const currentScore = scorecb(inningcb);
+  homeScore = homeScore + currentScore.Home
+  awayScore = awayScore + currentScore.Away
+  totalGame.push(`Inning ${i + 1}: Away: ${currentScore.Away} - Home: ${currentScore.Home}`);
 }
-
-
+return totalGame;
+}
+console.log(scoreboard(inning,getInningScore))
 
 
 /* 🛑🛑🛑🛑🛑 Please do not modify anything below this line 🛑🛑🛑🛑🛑 */
